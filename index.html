@@ -1,5 +1,14 @@
 <h1>South Korea's Toxic Air Pollution, Explained</h1>
 
+<div class="viewof-replay"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/cf47ca6b0721b2e1.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "viewof replay") return Inspector.into(".viewof-replay")();
+  return ["replay","PM10Line"].includes(name) || null;
+});
+</script>
 <div class="PM10Line"></div>
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
